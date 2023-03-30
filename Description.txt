@@ -1,0 +1,61 @@
+Résolution d'un système d'équations linéaires à N inconnues
+
+
+Mots clés:
+==========
+
+Système équations, Matrice inverse, Presse-papier, Javascript, Matrix
+
+
+
+Description:
+============
+
+Voici une application non graphique de calcul matriciel qui utilise l'objet MatWV contenu dans le fichier 'MatWV.js'. (voir l'article "Vecteurs et matrices: outils graphiques utiles")
+
+Le programme permet de:
+ - Choisir N (pratiquement de 1 à 100).
+ - Résoudre un système d'équations linéaires (1er degré);
+     le temps de calcul est alors indiqué.
+ - Commuter le système:  V = M*X   ==>   X = Inv(M)*V
+ - Importer et exporter les valeurs à l'aide de presse-papier.
+ - Remplir la matrice de valeurs aléatoires.
+
+Les méthodes pour le presse-papier se trouvent dans le fichier 'MatWV-Cb.js' qui augmente l'objet MatWV. Dans 'Str' les valeurs sont arrondies pour 'faciliter la visibilité', mais vous pouvez les enlever ou les ajouter à d'autres places.
+
+J'ai placé ce code (qui ne contient pas de <form>) dans la catégorie Formulaire car le programme est présenté sous la forme d'un "formulaire" de taille dynamique.
+A partir de N=50, la gestion de l'affichage commence à traîner. Si vous désirez faire des tests avec des matrices plus grandes, consultez l'article cité ci-dessus.
+
+Petite histoire
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Vers les années 1950, un de mes profs (avec deux de ses collègues) a été chargé par l'industrie de résoudre un système de 50 équations à 50 inconnues (basé sur une matrice symétrique définie positive).
+A trois, et à la règle à calcul, ils ont mis trois semaines pour le faire (avec une précision de 2 à 4 chiffres significatifs) !
+
+En 1974-1975, à l'EPFL de Lausanne, il y avait le "super ordinateur" Cyber de CDC (voir http://en.wikipedia.org/wiki/CDC_Cyber), qui occupait toute une maison climatisée. Il était 'entretenu' par plus de 20 personnes spécialisées et valait de 10 à 20 millions de francs (SFR de l'époque).
+Sur cet ordi, à l'aide de la routine 'IMGC' écrite en 'Fortran', il fallait quelques dixièmes de seconde  pour inverser une matrice quelconque 50•50, et avec une précision nettement meilleure !
+Mon voisin, à qui j'avais essayé d'expliquer cela, m'a toujours pris pour un blagueur.
+
+Et certains 'rêveurs' osaient même prédire que dans quelques années, chacun pourrait avoir l'équivalent d'une "Cyber-CDC" sur son bureau !
+
+Aujourd'hui (sept 2011), malgré les performances médiocres de Javascript, mon petit portable de 10" (environ 160 €) met 12 à 18 ms pour faire l'inversion d'une matrice de 50•50 !
+
+
+
+Conclusion:
+===========
+
+Faites directement un test: (observez la remarque ci-dessous)
+    http://www.william-voirol.ch/Prog/Transformations/Equations
+
+Remarque: de temps en temps, des espaces (caractères blancs) s'immiscent 
+dans certains textes. (CodeS-SourceS est au courant du problème).
+Si c'était le cas ici, enlevez les espaces avant d'utiliser l'adresse Web ci-dessus.
+
+L'exemple complet se trouve sur le fichier zip.
+
+
+
+Mises à jour:
+=============
+
+...
